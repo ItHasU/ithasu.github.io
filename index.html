@@ -1,15 +1,137 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Matthieu AUBRY - ItHasU">
   <title>ItHasU</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel="canonical" href="https://www.ithasu.org/">
+
+  <!-- Bootstrap core CSS -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <!-- Favicons -->
+  <meta name="theme-color" content="#7952b3">
+
+  <style>
+    body {
+      background-image: url("img/background.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  </style>
 </head>
 
 <body>
-  Hello world from GitHub!
+  <main>
+    <div class="container">
+      <div class="row mt-3 mb-3">
+        <div class="col-md-2">
+          <img src="img/photo.jpg" class="img-fluid rounded-circle shadow-lg mb-3" alt="Myself">
+        </div>
+        <div class="col-md-10">
+          <div class="card rounded-3 bg-light">
+            <div class="card-header">
+              <h1 class="card-title">Matthieu Aubry - ItHasU</small></h1>
+              <h4 class="card-subtitle mb-2 text-muted">TLDR; Passionné par la programmation, voici mes projets
+                personnels.</h4>
+            </div>
+            <div class="card-body">
+              <p>J'adore programmer n'importe quoi, aussi bien en terme de type de logiciel qu'en
+                type de matériel. Ca m'ammène souvent à faire clignoter des diodes. Vous trouverez ici quelques uns de
+                mes projets personnels.<br>Je travaille pour <a href="https://www.cervval.com/"
+                  target="blank">Cervval</a>
+                où j'ai pu réaliser différentes sortes de projets en temps que développeur et chef
+                de projet (mais ce n'est pas le sujet ici).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+        <div class="col">
+          <div class="card h-100 bg-light">
+            <!-- <img src="img/photo.jpg" class="card-img-top"> -->
+            <div class="card-body">
+              Dans le cadre de l'atelier connecté du centre socio-culturel l'Agora à Guilers, nous avons développé un
+              capteur de température Wifi. Le capteur est basé sur une carte avec le microcontrôleur ESP32.<br>
+
+              Le projet est <a href="https://github.com/ItHasU/WirelessThermometer">disponible sur Github</a>. Dans ce
+              dépôt on trouve les sources pour l'interface web de paramétrage et pour le firmware de la carte.
+            </div>
+            <div class="card-footer">
+              <h2 class="card-title">Thermomètre connecté</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 bg-light">
+            <div class="card-body">
+              Afin de faciliter la programmation des cartes ESP32 pour les thermomètres wifi, j'ai développé un petit
+              programme Python permettant de flasher le firmware sur la carte. Ce projet est largement inspiré de <a
+                href="https://github.com/tasmota/tasmotizer" target="blank">Tasmotizer</a>.<br>
+              On obtient un exécutable autonome (un seul fichier contenant l'intégralité des utilitaires et le runtime
+              Python), qui va télécharger la dernière version du firmware et programmer la carte.
+            </div>
+            <div class="card-footer">
+              <h2 class="card-title">Thermo flasheur</h2>
+            </div>
+          </div>
+        </div>
+
+        <!--
+          <div class="col">
+            <div class="card h-100 bg-info">
+              <img src="img/background.jpg" class="card-img-top">
+              <div class="card-body">
+              </div>
+              <div class="card-footer">
+                <h2 class="card-title">Thermomètre connecté</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 bg-info">
+              <img src="img/photo.jpg" class="card-img-top">
+              <div class="card-body">
+              </div>
+              <div class="card-footer">
+                <h2 class="card-title">Thermomètre connecté</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 bg-info">
+              <img src="img/photo.jpg" class="card-img-top">
+              <div class="card-body">
+              </div>
+              <div class="card-footer">
+                <h2 class="card-title">Thermomètre connecté</h2>
+              </div>
+            </div>
+          </div>
+          -->
+
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
