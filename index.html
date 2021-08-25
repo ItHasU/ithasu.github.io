@@ -14,6 +14,7 @@
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
   <!-- Favicons -->
   <meta name="theme-color" content="#7952b3">
@@ -31,6 +32,7 @@
 
 <body>
   <main>
+    <!-- Biography -->
     <div class="container">
       <div class="row mt-3 mb-3">
         <div class="col-md-2">
@@ -47,7 +49,7 @@
               <p>J'adore programmer n'importe quoi, aussi bien en terme de type de logiciel qu'en
                 type de matériel. Ca m'ammène souvent à faire clignoter des diodes. Vous trouverez ici quelques uns de
                 mes projets personnels.<br>Je travaille pour <a href="https://www.cervval.com/"
-                  target="blank">Cervval</a>
+                  target="_blank">Cervval</a>
                 où j'ai pu réaliser différentes sortes de projets en temps que développeur et chef
                 de projet (mais ce n'est pas le sujet ici).</p>
             </div>
@@ -56,73 +58,73 @@
       </div>
     </div>
 
+    <!-- Projects -->
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+        <!-- Thermomètre connecté -->
         <div class="col">
           <div class="card h-100 bg-light">
-            <!-- <img src="img/photo.jpg" class="card-img-top"> -->
-            <div class="card-body">
-              Dans le cadre de l'atelier connecté du centre socio-culturel l'Agora à Guilers, nous avons développé un
-              capteur de température Wifi. Le capteur est basé sur une carte avec le microcontrôleur ESP32.<br>
+            <div class="card-header">
+              <h3 class="card-title">Thermomètre connecté</h3>
+            </div>
 
-              Le projet est <a href="https://github.com/ItHasU/WirelessThermometer">disponible sur Github</a>. Dans ce
+            <img src="img/wireless-thermometer.jpg" class="card-img-top">
+
+            <div class="card-body">
+              Dans le cadre de l'atelier objets connectés du centre socioculturel l'Agora à Guilers, nous avons
+              développé un capteur de température Wifi.
+              Le montage est composé d'un microcontrôleur ESP32 et d'un capteur DS18b20.<br>
+
+              Le projet est <a href="https://github.com/ItHasU/WirelessThermometer" target="_blank">disponible sur
+                Github</a>. Dans ce
               dépôt on trouve les sources pour l'interface web de paramétrage et pour le firmware de la carte.
             </div>
-            <div class="card-footer">
-              <h2 class="card-title">Thermomètre connecté</h2>
+
+            <div class="card-footer text-end">
+              <!-- Badge : status -->
+              <div class="badge bg-success">
+                <i class="bi bi-check-lg"></i> Actif
+              </div>
+
+              <!-- Badge : GitHub repository -->
+              <a href="https://github.com/ItHasU/WirelessThermometer" target="_blank">
+                <div class="badge bg-dark">
+                  <i class="bi bi-github"></i> GitHub
+                </div>
+              </a>
             </div>
           </div>
         </div>
 
         <div class="col">
           <div class="card h-100 bg-light">
+            <div class="card-header">
+              <h3 class="card-title">Thermo flasher</h3>
+            </div>
+
             <div class="card-body">
               Afin de faciliter la programmation des cartes ESP32 pour les thermomètres wifi, j'ai développé un petit
               programme Python permettant de flasher le firmware sur la carte. Ce projet est largement inspiré de <a
-                href="https://github.com/tasmota/tasmotizer" target="blank">Tasmotizer</a>.<br>
-              On obtient un exécutable autonome (un seul fichier contenant l'intégralité des utilitaires et le runtime
-              Python), qui va télécharger la dernière version du firmware et programmer la carte.
+                href="https://github.com/tasmota/tasmotizer" target="_blank">Tasmotizer</a>.<br>
+              On obtient un <a href="https://github.com/ItHasU/ThermoFlasher/releases" target="_blank">exécutable
+                autonome</a> (un seul fichier contenant l'intégralité des utilitaires et le runtime Python), qui va
+              télécharger la dernière version du firmware et programmer la carte.
             </div>
-            <div class="card-footer">
-              <h2 class="card-title">Thermo flasheur</h2>
+            <div class="card-footer text-end">
+              <!-- Badge : status -->
+              <div class="badge bg-success">
+                <i class="bi bi-check-lg"></i> Actif
+              </div>
+
+              <!-- Badge : GitHub repository -->
+              <a href="https://github.com/ItHasU/ThermoFlasher" target="_blank">
+                <div class="badge bg-dark">
+                  <i class="bi bi-github"></i> GitHub
+                </div>
+              </a>
             </div>
           </div>
         </div>
-
-        <!--
-          <div class="col">
-            <div class="card h-100 bg-info">
-              <img src="img/background.jpg" class="card-img-top">
-              <div class="card-body">
-              </div>
-              <div class="card-footer">
-                <h2 class="card-title">Thermomètre connecté</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100 bg-info">
-              <img src="img/photo.jpg" class="card-img-top">
-              <div class="card-body">
-              </div>
-              <div class="card-footer">
-                <h2 class="card-title">Thermomètre connecté</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100 bg-info">
-              <img src="img/photo.jpg" class="card-img-top">
-              <div class="card-body">
-              </div>
-              <div class="card-footer">
-                <h2 class="card-title">Thermomètre connecté</h2>
-              </div>
-            </div>
-          </div>
-          -->
 
       </div>
     </div>
