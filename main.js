@@ -1,6 +1,5 @@
 const template = document.createElement("template");
 template.innerHTML = /*html*/`
-<div class="col">
   <div class="card h-100 bg-light">
     <div class="card-header">
       <h3 ref="title" class="card-title"></h3>
@@ -23,7 +22,6 @@ template.innerHTML = /*html*/`
       </a>
     </div>
   </div>
-</div>
 `;
 
 class ProjectCard extends HTMLElement {
@@ -56,7 +54,7 @@ class ProjectCard extends HTMLElement {
               break;
             case "mature":
               icon = "check-lg";
-              text = "Actif";
+              text = "Fonctionnel";
               color = "success";
               break;
             case "archived":

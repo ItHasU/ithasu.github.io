@@ -11,10 +11,13 @@
   <link rel="canonical" href="https://www.ithasu.org/">
 
   <!-- Bootstrap core CSS -->
-  <!-- CSS only -->
+  <!-- CSS only, script is loaded at the end. If you change here, also change in the template in main.js -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <!-- Javascript -->
+  <script src="main.js"></script>
 
   <!-- Favicons -->
   <meta name="theme-color" content="#7952b3">
@@ -61,70 +64,72 @@
     <!-- Projects -->
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+
+        <!-- MQTT -->
+        <project-card class="col" title="MQTT Dashboard" status="development"
+          repository="https://github.com/ItHasU/MQTTToolbox">
+          <img slot="picture" src="img/mqttToolbox.png">
+          <div slot="content">
+            L'objectif de ce projet est de pouvoir jouer avec MQTT depuis une interface web. L'application est
+            développée en Typescript (fullstack) et est déployable à partir d'une <a
+              href="https://hub.docker.com/repository/docker/ithasu/mqtt-toolbox" target="_blank">image
+              docker</a> générée en utilisant les actions GitHub.
+            Fonctionnalités:
+            <ul>
+              <li>Dashboard en HTML</li>
+              <li>Edition du dashboard depuis la page</li>
+              <li>balises mqtt-*, envoi de messages MQTT.publish()</li>
+              <li>Cron envoi de messages</li>
+              <li>...</li>
+            </ul>
+          </div>
+        </project-card>
+
         <!-- Thermomètre connecté -->
-        <div class="col">
-          <div class="card h-100 bg-light">
-            <div class="card-header">
-              <h3 class="card-title">Thermomètre connecté</h3>
-            </div>
+        <project-card class="col" title="Thermomètre connecté"
+          repository="https://github.com/ItHasU/WirelessThermometer" status="mature">
+          <img slot="picture" src="img/wireless-thermometer.jpg">
+          <div slot="content">
+            Dans le cadre de l'atelier objets connectés du centre socioculturel l'Agora à Guilers, nous avons
+            développé un capteur de température Wifi.
+            Le montage est composé d'un microcontrôleur ESP32 et d'un capteur DS18b20.<br>
 
-            <img src="img/wireless-thermometer.jpg" class="card-img-top">
-
-            <div class="card-body">
-              Dans le cadre de l'atelier objets connectés du centre socioculturel l'Agora à Guilers, nous avons
-              développé un capteur de température Wifi.
-              Le montage est composé d'un microcontrôleur ESP32 et d'un capteur DS18b20.<br>
-
-              Le projet est <a href="https://github.com/ItHasU/WirelessThermometer" target="_blank">disponible sur
-                Github</a>. Dans ce
-              dépôt on trouve les sources pour l'interface web de paramétrage et pour le firmware de la carte.
-            </div>
-
-            <div class="card-footer text-end">
-              <!-- Badge : status -->
-              <div class="badge bg-success">
-                <i class="bi bi-check-lg"></i> Actif
-              </div>
-
-              <!-- Badge : GitHub repository -->
-              <a href="https://github.com/ItHasU/WirelessThermometer" target="_blank">
-                <div class="badge bg-dark">
-                  <i class="bi bi-github"></i> GitHub
-                </div>
-              </a>
-            </div>
+            Le projet est <a href="https://github.com/ItHasU/WirelessThermometer" target="_blank">disponible sur
+              Github</a>. Dans ce
+            dépôt on trouve les sources pour l'interface web de paramétrage et pour le firmware de la carte.
           </div>
-        </div>
+        </project-card>
 
-        <div class="col">
-          <div class="card h-100 bg-light">
-            <div class="card-header">
-              <h3 class="card-title">Thermo flasher</h3>
-            </div>
-
-            <div class="card-body">
-              Afin de faciliter la programmation des cartes ESP32 pour les thermomètres wifi, j'ai développé un petit
-              programme Python permettant de flasher le firmware sur la carte. Ce projet est largement inspiré de <a
-                href="https://github.com/tasmota/tasmotizer" target="_blank">Tasmotizer</a>.<br>
-              On obtient un <a href="https://github.com/ItHasU/ThermoFlasher/releases" target="_blank">exécutable
-                autonome</a> (un seul fichier contenant l'intégralité des utilitaires et le runtime Python), qui va
-              télécharger la dernière version du firmware et programmer la carte.
-            </div>
-            <div class="card-footer text-end">
-              <!-- Badge : status -->
-              <div class="badge bg-success">
-                <i class="bi bi-check-lg"></i> Actif
-              </div>
-
-              <!-- Badge : GitHub repository -->
-              <a href="https://github.com/ItHasU/ThermoFlasher" target="_blank">
-                <div class="badge bg-dark">
-                  <i class="bi bi-github"></i> GitHub
-                </div>
-              </a>
-            </div>
+        <project-card class="col" title="Thermo flasher" status="mature"
+          repository="https://github.com/ItHasU/ThermoFlasher/releases">
+          <div slot="content">
+            Afin de faciliter la programmation des cartes ESP32 pour les thermomètres wifi, j'ai développé un petit
+            programme Python permettant de flasher le firmware sur la carte. Ce projet est largement inspiré de <a
+              href="https://github.com/tasmota/tasmotizer" target="_blank">Tasmotizer</a>.<br>
+            On obtient un <a href="https://github.com/ItHasU/ThermoFlasher/releases" target="_blank">exécutable
+              autonome</a> (un seul fichier contenant l'intégralité des utilitaires et le runtime Python), qui va
+            télécharger la dernière version du firmware et programmer la carte.
           </div>
-        </div>
+        </project-card>
+
+        <!-- Projets abandonnés-->
+        <project-card class="col" title="Colette"
+          repository="https://github.com/ItHasU/Colette/blob/master/src/Colette/language.ts" status="archived">
+          <!-- <img src="img/photo.jpg" slot="picture"> -->
+          <div slot="content">
+            L'objectif de ce projet était de créer un bot de conversation.
+            Même si je n'ai pas été au bout, il contient un bout de code assez intéressant.
+            En effet, j'ai développé une fonction capable de faire une <a
+              href="https://fr.wikipedia.org/wiki/Distance_de_Levenshtein" target="_blank">distance de Levenshtein</a>
+            sur du texte, tout en faisant de
+            l'identification de paramètres dans la chaine. Par exemple :
+            <ul>
+              <li>Template : <code>Mon nom est $name</code></li>
+              <li>Phrase : <code>Mno nom et Matthieu</code></li>
+              <li>Résultat : <code>Matching at 90%, $name="Matthieu"</code></li>
+            </ul>
+          </div>
+        </project-card>
 
       </div>
     </div>
