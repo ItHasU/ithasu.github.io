@@ -12,8 +12,11 @@
 
   <!-- Bootstrap core CSS -->
   <!-- CSS only, script is loaded at the end. If you change here, also change in the template in main.js -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
   <!-- Javascript -->
@@ -67,8 +70,8 @@
 
         <!-- MQTT -->
         <project-card class="col" title="MQTT Dashboard" status="development"
-          repository="https://github.com/ItHasU/MQTTToolbox">
-          <img slot="picture" src="img/mqttToolbox.png">
+          repository="https://github.com/ItHasU/MQTTToolbox" class="card-img-top">
+          <img slot="picture" src="img/mqttToolbox.png" class="img-fluid">
           <div slot="content">
             L'objectif de ce projet est de pouvoir jouer avec MQTT depuis une interface web. L'application est
             développée en Typescript (fullstack) et est déployable à partir d'une <a
@@ -88,7 +91,7 @@
         <!-- Thermomètre connecté -->
         <project-card class="col" title="Thermomètre connecté"
           repository="https://github.com/ItHasU/WirelessThermometer" status="mature">
-          <img slot="picture" src="img/wireless-thermometer.jpg">
+          <img slot="picture" src="img/wireless-thermometer.jpg" class="img-fluid">
           <div slot="content">
             Dans le cadre de l'atelier objets connectés du centre socioculturel l'Agora à Guilers, nous avons
             développé un capteur de température Wifi.
@@ -115,7 +118,7 @@
         <!-- Projets abandonnés-->
         <project-card class="col" title="Colette"
           repository="https://github.com/ItHasU/Colette/blob/master/src/Colette/language.ts" status="archived">
-          <!-- <img src="img/photo.jpg" slot="picture"> -->
+          <!-- <img src="img/photo.jpg" slot="picture" class="img-fluid"> -->
           <div slot="content">
             L'objectif de ce projet était de créer un bot de conversation.
             Même si je n'ai pas été au bout, il contient un bout de code assez intéressant.
@@ -134,10 +137,6 @@
       </div>
     </div>
   </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
 
 </body>
 
